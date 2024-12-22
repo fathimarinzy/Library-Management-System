@@ -8,14 +8,23 @@
     <title>Document</title>
 </head>
 <body>
+    
+
     <form action="" method="POST">
         {% csrf_token %}
         {% block content1 %}
         <a href="/login/">Login</a>
         <a href="/student_register/">Register</a>
         {% endblock content1 %}
-
-
     </form>
+  
+            {% block content2 %}
+
+              <h2>Welcome</h2>
+              <p>Log in to continue...</p>
+            {% endblock content2 %}
+
+      
+
 </body>
 </html>

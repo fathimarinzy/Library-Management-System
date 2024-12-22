@@ -4,38 +4,113 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        :root {
+          --accent-color: #71c55d;
+          --background-color: #ffffff;
+          --gray-light: #f5f6f8;
+          --gray: #8f8f8f;
+        }
+    
+        html, body {
+          height: 100%;
+          margin: 0;
+          font-family: 'Roboto', Helvetica, Arial, sans-serif;
+        }
+    
+        body {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          position: relative;
+          background: var(--background-color);
+        }
+    
+        .login-form {
+          width: 500px;
+          max-width: 900px;
+          height: 500px;
+          padding: 2em;
+          background: linear-gradient(to bottom, #F5FFF5, rgba(0, 0, 0, 0.1));
+          border-radius: 10px;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+          text-align: center;
+
+          display: flex; 
+          flex-direction: column; 
+          justify-content: center; 
+          align-items: center; 
+
+        }
+    
+        .lf--input {
+          width: 70%;
+          padding: 10px;
+          margin-bottom: 1em;
+          border: 1px solid var(--gray-light);
+          border-radius: 5px;
+        }
+    
+        .lf--submit {
+          display: flex; 
+
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          padding: 1em;
+          width: 95px;
+          height: 45px;
+          background: var(--accent-color);
+          border: 0;
+          color: #fff;
+          cursor: pointer;
+          font-size: 15px;
+          font-weight: 15;
+          text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+          border-radius: 5px;
+          margin: 0 auto; 
+          margin-top: 1em;
+        }
+    
+        .lf--submit:focus {
+          outline: none;
+          transform: scale(1.05);
+          transition: transform 0.15s ease;
+        }
+      </style>
 </head>
 <body>
-    <form action="" method="POST">
+    <form  class="login-form" action="" method="POST">
     {% csrf_token %}
-        <label>FIRSTNAME</label>
-        <input type="text" name="Firstname" placeholder="Firstname"><br>
+        <!-- <label>FIRSTNAME</label> -->
+        <input class="lf--input" type="text" name="Firstname" placeholder="Firstname">
 
-        <label>lASTNAME</label>
-        <input type="text" name="Lastname" placeholder="Lastname"><br>
+        <!-- <label>lASTNAME</label> -->
+        <input class="lf--input" type="text" name="Lastname" placeholder="Lastname">
         
-        <label>EMAIL</label>
-        <input type="email" name="Email" placeholder="Email"><br>
+        <!-- <label>EMAIL</label> -->
+        <input class="lf--input" type="email" name="Email" placeholder="Email">
 
-        <label>USERNAME</label>
-        <input type="text" name="username" placeholder="Username"><br>
+        <!-- <label>USERNAME</label> -->
+        <input class="lf--input" type="text" name="username" placeholder="Username">
 
-        <label>PASSWORD</label>
-        <input type="password" name="password" placeholder="password"><br>
+        <!-- <label>PASSWORD</label> -->
+        <input class="lf--input" type="password" name="password" placeholder="Password">
 
-        <label>ADDRESS</label>
-        <input type="text" name="address" placeholder="Address"><br>
+        <!-- <label>ADDRESS</label> -->
+        <input class="lf--input" type="text" name="address" placeholder="Address">
 
-        <label>PHONE NUMBER</label>
-        <input type="number" name="phone_number" placeholder="phone Number"><br>
+        <!-- <label>PHONE NUMBER</label> -->
+        <input class="lf--input" type="number" name="phone_number" placeholder="Phone Number">
         
-        <label>SALARY</label>
-        <input type="number" name="salary" placeholder="salary"><br>
+        <!-- <label>SALARY</label> -->
+        <input class="lf--input" type="number" name="salary" placeholder="Salary">
 
-        <label>EXPERIENCE</label>
-        <input type="number" name="experience" placeholder="experience">
+        <!-- <label>EXPERIENCE</label> -->
+        <input class="lf--input" type="number" name="experience" placeholder="Experience">
 
-        <input type="submit" value="Register">
+        <input class='lf--submit' type="submit" value="Register">
  
     </form>
 </body>

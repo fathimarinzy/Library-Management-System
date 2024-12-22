@@ -1,3 +1,5 @@
+{% extends "index.html" %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,15 +8,27 @@
     <title>Document</title>
 </head>
 <body>
+    
+    
     <form action="" method="POST">
         {% csrf_token %}
+        {% block content1 %}
         <a href="/teacher_register/">Add Teacher</a>
         <a href="/viewteacher/">View Teacher</a>
         <a href="/deleteteacher/">Delete Teacher</a>
         <a href="/viewstudent/">View student</a>
         <a href="/approvestudent/">Approve student</a>
         <a href="/deletestudent/">Delete student</a>
+        {% endblock content1 %}
     </form>
+    
+    {% block content2 %}
+
+    <h2>Welcome Admin,</h2>
+
+   {% endblock content2 %}
+
+   
     
 </body>
 </html>
