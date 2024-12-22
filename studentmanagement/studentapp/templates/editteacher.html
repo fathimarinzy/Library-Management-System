@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="/updateteacher/{{ data.id }}/" method="POST">
+        {% csrf_token %}
+        <input type="text" name="fname" id="emp" value="{{data.teacher_id.first_name}}" placeholder="First name"><br>
+
+        <input type="text" name="lname" id="sal" value="{{data.teacher_id.last_name}}" placeholder="Last name"><br>
+
+        <input type="email" name="email" id="sal" value="{{data.teacher_id.email}}" placeholder="email"><br>
+
+        <input type="text" name="address" id="sal" value="{{data.address}}" placeholder="address"><br>
+
+        <input type="number" name="phone" id="sal" value="{{data.phone_number}}" placeholder="phone_number"><br>
+
+        <input type="number" name="salary" id="sal" value="{{data.salary}}" placeholder="salary"><br>
+
+        <input type="number" name="experience" id="sal" value="{{data.experience}}" placeholder="experience"><br>
+
+
+        <input type="submit" value="update">
+
+    </form>
+</body>
+
+</html>
