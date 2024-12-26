@@ -41,6 +41,8 @@ urlpatterns = [
     path("editstudent/",editstudent,name='editstudent'),
     path("updatestudent/<int:id>/",updatestudent,name='updatestudent'),
     path("logoutstudent/",logoutstudent,name='logoutstudent'),
+    path("hometeacher/",hometeacher,name='hometeacher'),
+
 
 
 

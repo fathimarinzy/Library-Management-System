@@ -142,6 +142,11 @@ def updatestudent(request,id):
         return HttpResponse("Updated Successfully")
     else:
         return render(request,"editstudent.html")
+    
+def hometeacher(request):
+    x=Teacher.objects.all()
+    return render(request,"hometeacher.html",{"data":x})
+
 
 def logoutstudent(request):
     logout(request)
